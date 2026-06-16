@@ -3,4 +3,4 @@ project(neetcode_cpp)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(main arrays-&-hashing/easy/contains-duplicate/main.cpp)
+add_executable(main arrays-&-hashing/easy/valid-anagram/main.cpp)
