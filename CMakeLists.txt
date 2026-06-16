@@ -3,4 +3,4 @@ project(neetcode_cpp)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(main arrays-&-hashing/medium/group-anagrams/main.cpp)
+add_executable(main arrays-&-hashing/medium/top-k-frequent-elements/main.cpp)
