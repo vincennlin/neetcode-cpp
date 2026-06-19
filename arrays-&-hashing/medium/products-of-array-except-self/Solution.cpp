@@ -9,28 +9,22 @@ using namespace std;
 class Solution {
 public:
     vector<int> productExceptSelf(vector<int>& nums) {
-        int products = 1;
-        int zeroCount = 0;
+        int n = nums.size();
+        vector<int> prefix(n);
+        vector<int> suffix(n);
+        vector<int> result(n);
 
-        for (int num : nums) {
-            if (num != 0) {
-                products *= num;
-            } else {
-                zeroCount++;
-            }
+        prefix[0] = 1;
+        for (int i = 1; i < n; i++) {
+            prefix[i] = prefix[i - 1] * nums[i - 1];
+        }
+        suffix[n - 1] = 1;
+        for (int i = n - 2; i >= 0; i--) {
+            suffix[i] = suffix[i + 1] * nums[i + 1];
         }
 
-        if (zeroCount > 1) {
-            return vector<int>(nums.size(), 0);
-        }
-
-        vector<int> result(nums.size());
-        for (int i = 0; i < nums.size(); i++) {
-            if (zeroCount > 0) {
-                result[i] = (nums[i] == 0) ? products : 0;
-            } else {
-                result[i] = products / nums[i];
-            }
+        for (int i = 0; i < n; i++) {
+            result[i] = prefix[i] * suffix[i];
         }
 
         return result;
