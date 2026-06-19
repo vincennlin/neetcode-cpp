@@ -3,4 +3,5 @@ project(neetcode_cpp)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(main arrays-&-hashing/medium/encode-and-decode-strings/main.cpp)
+add_executable(main arrays-&-hashing/medium/products-of-array-except-self/main.cpp
+)
