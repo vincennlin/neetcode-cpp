@@ -37,7 +37,32 @@ Constraints:
 */
 
 #include <iostream>
+#include <queue>
 #include "Solution.cpp"
+
+void printLevelOrder(TreeNode* root) {
+    if (!root) {
+        std::cout << "[]" << std::endl;
+        return;
+    }
+
+    std::cout << "[";
+    std::queue<TreeNode*> q;
+    q.push(root);
+
+    while (!q.empty()) {
+        TreeNode* curr = q.front();
+        q.pop();
+
+        std::cout << curr->val;
+
+        if (curr->left) q.push(curr->left);
+        if (curr->right) q.push(curr->right);
+
+        if (!q.empty()) std::cout << ", ";
+    }
+    std::cout << "]" << std::endl;
+}
 
 int main() {
     Solution solution;
@@ -55,8 +80,5 @@ int main() {
     std::cout << "Input: root = [1, 2, 3, 4, 5, 6, 7]" << std::endl;
     std::cout << "Expected Output: [1, 3, 2, 7, 6, 5, 4]" << std::endl;
     std::cout << "Your Output: [";
-    // Function to print the tree in level order can be implemented here
-    std::cout << "]" << std::endl;
-
-    return 0;
+    printLevelOrder(output_ex1);
 }
