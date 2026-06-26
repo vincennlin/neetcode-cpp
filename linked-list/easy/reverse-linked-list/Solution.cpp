@@ -13,11 +13,17 @@
  * };
  */
 
-struct ListNode;
+# include "ListNode.cpp";
 
 class Solution {
 public:
     ListNode* reverseList(ListNode* head) {
-        return nullptr;
+        if (head == nullptr || head -> next == nullptr) return head;
+
+        ListNode* root = reverseList(head -> next);
+        head -> next -> next = head;
+        head -> next = nullptr;
+
+        return root;
     }
 };
