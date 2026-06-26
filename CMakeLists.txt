@@ -3,5 +3,5 @@ project(neetcode_cpp)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(main arrays-&-hashing/medium/products-of-array-except-self/main.cpp
+add_executable(main linked-list/easy/reverse-linked-list/main.cpp
 )
