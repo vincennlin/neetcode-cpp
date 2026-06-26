@@ -3,5 +3,5 @@ project(neetcode_cpp)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(main trees/easy/diameter-of-binary-tree/main.cpp
+add_executable(main trees/easy/balanced-binary-tree/main.cpp
 )
