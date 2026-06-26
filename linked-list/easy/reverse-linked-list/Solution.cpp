@@ -18,12 +18,16 @@
 class Solution {
 public:
     ListNode* reverseList(ListNode* head) {
-        if (head == nullptr || head -> next == nullptr) return head;
+        ListNode *prev = nullptr, *curr = head, *next;
 
-        ListNode* root = reverseList(head -> next);
-        head -> next -> next = head;
-        head -> next = nullptr;
+        while (curr) {
+            next = curr -> next;
+            curr -> next = prev;
+            prev = curr;
+            curr = next;
+        }
+        head = prev;
 
-        return root;
+        return head;
     }
 };
