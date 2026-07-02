@@ -3,5 +3,5 @@ project(neetcode_cpp)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(main trees/easy/same-binary-tree/main.cpp
+add_executable(main trees/easy/subtree-of-another-tree/main.cpp
 )
