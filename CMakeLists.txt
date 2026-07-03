@@ -3,5 +3,5 @@ project(neetcode_cpp)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(main stack/easy/valid-parentheses/main.cpp
+add_executable(main binary-search/easy/binary-search/main.cpp
 )
