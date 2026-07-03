@@ -3,5 +3,5 @@ project(neetcode_cpp)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(main heap/easy/last-stone-weight/main.cpp
+add_executable(main two-pointers/easy/valid-palindrome/main.cpp
 )
