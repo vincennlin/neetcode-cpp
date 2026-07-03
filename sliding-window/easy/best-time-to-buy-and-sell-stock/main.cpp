@@ -54,5 +54,13 @@ int main() {
     std::cout << "Expected Output: 0" << std::endl;
     std::cout << "Your Output: " << output_ex2 << std::endl;
 
+    // INPUT prices=[5,1,5,6,7,1,10]
+    std::cout << "\n[Custom Example]" << std::endl;
+    std::vector<int> prices_custom = {5, 1, 5, 6, 7, 1, 10};
+    int output_custom = solution.maxProfit(prices_custom);
+    std::cout << "Input: prices = [5, 1, 5, 6, 7, 1, 10]" << std::endl;
+    std::cout << "Expected Output: 9" << std::endl;
+    std::cout << "Your Output: " << output_custom << std::endl;
+
     return 0;
 }
