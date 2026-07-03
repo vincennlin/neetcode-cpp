@@ -3,5 +3,5 @@ project(neetcode_cpp)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(main two-pointers/easy/valid-palindrome/main.cpp
+add_executable(main sliding-window/easy/best-time-to-buy-and-sell-stock/main.cpp
 )
