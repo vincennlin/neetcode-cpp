@@ -3,5 +3,5 @@ project(neetcode_cpp)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(main two-pointers/medium/container-with-most-water/main.cpp
+add_executable(main backtracking/medium/subsets/main.cpp
 )
