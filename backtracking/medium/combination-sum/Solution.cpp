@@ -11,23 +11,24 @@ public:
         sort(nums.begin(), nums.end());
         vector<vector<int>> res;
         vector<int> cur;
-        dfs(nums, res, cur, 0, target);
+        dfs(nums, res, cur, 0, 0, target);
         return res;
     }
 
     void dfs(const vector<int>& nums, vector<vector<int>>& res,
-        vector<int>& cur, int i, int target) {
-        if (target == 0) {
+        vector<int>& cur, int curSum, int i, int target) {
+        if (curSum == target) {
             res.push_back(cur);
             return;
         }
-        if (i >= nums.size() || target < 0) {
-            return;
-        }
 
-        cur.push_back(nums[i]);
-        dfs(nums, res, cur, i, target - nums[i]);
-        cur.pop_back();
-        dfs(nums, res, cur, i + 1, target);
+        for (int j = i; j < nums.size(); j++) {
+            if (curSum + nums[j] > target) {
+                return;
+            }
+            cur.push_back(nums[j]);
+            dfs(nums, res, cur, curSum + nums[j], j, target);
+            cur.pop_back();
+        }
     }
 };
