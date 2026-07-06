@@ -3,5 +3,5 @@ project(neetcode_cpp)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(main two-pointers/medium/two-integer-sum-ii/main.cpp
+add_executable(main two-pointers/medium/3sum/main.cpp
 )
